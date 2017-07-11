@@ -1,7 +1,8 @@
 /**
  * Created by 13820 on 2017/7/9.
  */
-define(['jquery','template','bootstrap'],function($,template){
+define(['jquery','template','util','bootstrap'],function($,template,util){
+    util.setMenu('/teacher/list')
     $.ajax({
         type:'get',
         url:'/api/teacher',

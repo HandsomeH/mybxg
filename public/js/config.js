@@ -10,10 +10,22 @@ requirejs.config({
         common:'../js/common',
         cookie:'jquery-cookie/jquery.cookie',
         login:'../js/login',
-        tealist:'../js/teacher-list'
+        tealist:'../js/teacher-list',
+        teaAdd:'../js/teacher-add',
+        util:'../js/util',
+        datepicker:'bootstrap-datepicker/js/bootstrap-datepicker',
+        language:'bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min',
+        validate:'validate/jquery-validate.min',
+        form:'jquery-form/jquery.form'
     },
     shim:{
         bootstrap:{
+            deps:['jquery']
+        },
+        language:{
+            deps:['jquery','datepicker']
+        },
+        validate:{
             deps:['jquery']
         }
     }
