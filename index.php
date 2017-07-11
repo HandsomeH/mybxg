@@ -8,8 +8,8 @@
     $str = substr($url,1);
     $arr = explode('/',$str);
         if(count($arr)==2){
-        $path = $arr[0];
-        $filename = $arr[1];
+            $path = $arr[0];
+            $filename = $arr[1];
 
         }else{
             $filename = 'login';

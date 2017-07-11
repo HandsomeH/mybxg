@@ -3,10 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>学IT - 后台管理系统</title>
-    <link rel="stylesheet" href="./public/assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./public/assets/font-awesome/css/font-awesome.css">
-    <link rel="stylesheet" href="./public/assets/nprogress/nprogress.css">
-    <link rel="stylesheet" href="./public/less/index.css">
+    <?php include('/views/common/style.php'); ?>
 </head>
 <body>
     <!-- 登录 -->
@@ -32,28 +29,9 @@
             </form>
         </div>
     </div>
-    
-    <script src="./public/assets/jquery/jquery.min.js"></script>
-    <script src="./public/assets/bootstrap/js/bootstrap.min.js"></script>
-    <script type="text/javascript">
-        // 实现登录功能
-        $('#btn').click(function(){
-            $.ajax({
-                type : 'post',
-                // url : 'http://api.studyit.com/login',
-                url : '/api/login',
-                data : $('#loginForm').serialize(),
-                dataType : 'json',
-                success : function(data){
-                    if(data.code == 200){
-                        // 应该把data中用户登录信息保存到cookie中即可实现页面数据共享
-                        location.href = 'index.php/index/index';
-                    }
-                }
-            });
-            
-            return false;
-        });
+    <?php include('/views/common/script.php'); ?>
+    <script>
+        requirejs(["login"]);
     </script>
 </body>
 </html>

@@ -1,0 +1,20 @@
+/**
+ * Created by 13820 on 2017/7/9.
+ */
+requirejs.config({
+    baseUrl:'/public/assets',
+    paths:{
+        jquery:'jquery/jquery.min',
+        bootstrap:'bootstrap/js/bootstrap.min',
+        template:'artTemplate/template-web',
+        common:'../js/common',
+        cookie:'jquery-cookie/jquery.cookie',
+        login:'../js/login',
+        tealist:'../js/teacher-list'
+    },
+    shim:{
+        bootstrap:{
+            deps:['jquery']
+        }
+    }
+})
