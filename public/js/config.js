@@ -7,6 +7,9 @@ requirejs.config({
         jquery:'jquery/jquery.min',
         bootstrap:'bootstrap/js/bootstrap.min',
         template:'artTemplate/template-web',
+        uploadify:'jquery-uploadify/jquery.uploadify',
+        region:'jquery-region/jquery.region',
+        editor:'ckeditor/ckeditor',
         common:'../js/common',
         cookie:'jquery-cookie/jquery.cookie',
         login:'../js/login',
@@ -16,7 +19,8 @@ requirejs.config({
         datepicker:'bootstrap-datepicker/js/bootstrap-datepicker',
         language:'bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min',
         validate:'validate/jquery-validate.min',
-        form:'jquery-form/jquery.form'
+        form:'jquery-form/jquery.form',
+        settings:'../js/settings'
     },
     shim:{
         bootstrap:{
@@ -27,6 +31,12 @@ requirejs.config({
         },
         validate:{
             deps:['jquery']
+        },
+        uploadify:{
+            deps:['jquery']
+        },
+        editor:{
+            exports:'CKEDITOR'
         }
     }
 })
